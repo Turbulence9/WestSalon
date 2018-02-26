@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Route } from 'react-router-dom';
+import axios from 'axios';
 import './App.css';
 
+import Calender from './components/calender';
+import Landing from './components/landing';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          Neener neener neener
-        </p>
+        <Route exact path='/' render={ (props) => <Landing {...props}/> }/>
+        <Route path='/calender' render={ (props) => <Calender {...props}/> }/>
       </div>
     );
   }

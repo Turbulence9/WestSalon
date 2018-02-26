@@ -6,9 +6,8 @@ const PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-  res.send('hello Jaymemou!');
-})
+const clients = require('./routes/clients');
+app.use('/admin/users',clients);
 
 app.listen(PORT, ()=> {
   console.log('Listening on port',PORT);
