@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -18,10 +18,10 @@ class Calender extends Component {
 
   render() {
     return (
-    <div className="Calender">
-      AAAHHHH LANDINGGG WOWWWW
+    <div className="Landing">
+      West Salon By Leah
       <button onClick={this.toCalenderPage}>
-        aaaaa
+        Book Appointment
       </button>
   </div>
   )}
